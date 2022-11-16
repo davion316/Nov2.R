@@ -1,14 +1,12 @@
-Author: "Davion Greene, Date: 11/02/2022, Purpose: Squared Test
-> data_frame <- read.csv("https://goo.gl/j6lRXD")
-> table(data_frame$treatment, data_frame$improvement)
-             
-              improved not-improved
-  not-treated       26           29
-  treated           35           15
-> chisq.test(data_frame$treatment, data_frame$improvement, correct=FALSE)
+# Author: "Greene, Date: 11/02/2022, Purpose: Chi-square analysis
 
-	Pearson's Chi-squared test
+# Reading teh sample data
 
-data:  data_frame$treatment and data_frame$improvement
-X-squared = 5.5569, df = 1, p-value =
-0.01841
+data_frame <- read.csv("https://goo.gl/j6lRXD")
+
+# Check the data counts
+
+table(data_frame$treatment, data_frame$improvement)
+
+chisq.test(data_frame$treatment, data_frame$improvement, correct=FALSE)
+
